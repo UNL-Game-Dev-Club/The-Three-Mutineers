@@ -23,6 +23,9 @@ public class Player1Controls : MonoBehaviour
 
     bool gotKey;
 
+    [SerializeField] GameObject deadText;
+    [SerializeField] GameObject playerCamera;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -96,6 +99,14 @@ public class Player1Controls : MonoBehaviour
                 otherHealthP1.TakeHit();
             }
         }
+
+        if (collision.collider.name == "Exit")
+        {
+            if (attack)
+            {
+                Destroy(collision.collider.gameObject);
+            }
+        }
     }
 
     public bool GotKey
@@ -104,5 +115,10 @@ public class Player1Controls : MonoBehaviour
         {
             return gotKey;
         }
+    }
+
+    private void OnDestroy()
+    {
+        deadText.SetActive(true);
     }
 }

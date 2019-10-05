@@ -23,6 +23,9 @@ public class Player3Controls : MonoBehaviour
 
     bool gotKey;
 
+    [SerializeField] GameObject playerCamera;
+    [SerializeField] GameObject deadText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -97,5 +100,10 @@ public class Player3Controls : MonoBehaviour
         {
             return gotKey;
         }
+    }
+
+    private void OnDestroy()
+    {
+        deadText.SetActive(true);
     }
 }
