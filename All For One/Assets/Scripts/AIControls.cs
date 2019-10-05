@@ -8,6 +8,7 @@ public class AIControls : MonoBehaviour
     [SerializeField] GameObject end;
 
     [SerializeField] float time;
+    [SerializeField] GameObject key;
 
     // Start is called before the first frame update
     void Start()
@@ -56,5 +57,10 @@ public class AIControls : MonoBehaviour
                 yield return new WaitForEndOfFrame();
             }
         }
+    }
+
+    private void OnDestroy()
+    {
+        Instantiate(key, transform.position, Quaternion.identity).name = "Key";
     }
 }
