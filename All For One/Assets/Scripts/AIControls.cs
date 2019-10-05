@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class AIControls : MonoBehaviour
 {
-    [SerializeField] Vector3 start;
-    [SerializeField] Vector3 end;
+    [SerializeField] GameObject start;
+    [SerializeField] GameObject end;
 
     [SerializeField] float time;
 
@@ -27,9 +27,9 @@ public class AIControls : MonoBehaviour
         while (true)
         {
             time = 0;
-            while (transform.position != end)
+            while (transform.position != end.transform.position)
             {
-                transform.position = Vector3.Lerp(transform.position, end, time / 100.0f);
+                transform.position = Vector3.Lerp(transform.position, end.transform.position, time / 100.0f);
                 time += Time.deltaTime;
                 yield return new WaitForEndOfFrame();
             }
@@ -42,9 +42,9 @@ public class AIControls : MonoBehaviour
             }
 
             time = 0;
-            while (transform.position != start)
+            while (transform.position != start.transform.position)
             {
-                transform.position = Vector3.Lerp(transform.position, start, time / 100.0f);
+                transform.position = Vector3.Lerp(transform.position, start.transform.position, time / 100.0f);
                 time += Time.deltaTime;
                 yield return new WaitForEndOfFrame();
             }

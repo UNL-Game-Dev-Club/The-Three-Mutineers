@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 7394936536856711078}
   - component: {fileID: 2223044567586462182}
   - component: {fileID: 7827410064631329334}
+  - component: {fileID: 8161941211522070360}
   m_Layer: 0
-  m_Name: Platform
+  m_Name: P3 Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 943084181871672054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.14438438, y: 52.519585, z: 0}
+  m_LocalPosition: {x: -0.14438438, y: 52.519585, z: 1}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 581d89e41cb29d34f979738280ac7aaa, type: 3}
-  m_Color: {r: 0.3726415, g: 1, b: 0.9546589, a: 1}
+  m_Color: {r: 0.54341704, g: 1, b: 0.5235849, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -107,3 +108,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &8161941211522070360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943084181871672054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9423eb95c6a104e479a34c2dee7707a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gate: {fileID: 0}
+  bulletSpawner: {fileID: 0}
+  openGate: 0
+  isP1Platform: 0
+  isP2Platform: 0
+  isP3Platform: 1

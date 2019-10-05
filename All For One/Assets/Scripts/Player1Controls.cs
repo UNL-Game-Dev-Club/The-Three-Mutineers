@@ -84,15 +84,16 @@ public class Player1Controls : MonoBehaviour
             gotKey = true;
         }
 
-        Debug.Log(collision.collider.name);
+        Debug.Log(name + " " + collision.collider.name);
 
-        if (Input.GetButtonDown("P1 Attack"))
+        attack = Input.GetButtonDown("P1 Attack");
+        if (attack)
         {
-            attack = true;
-            HealthController otherHealth = collision.collider.GetComponent<HealthController>();
-            if (otherHealth != null)
+            Debug.Log("P1 Attack");
+            HealthController otherHealthP1 = collision.collider.GetComponent<HealthController>();
+            if (otherHealthP1 != null)
             {
-                otherHealth.TakeHit();
+                otherHealthP1.TakeHit();
             }
         }
     }
