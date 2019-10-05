@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class HealthController : MonoBehaviour
 {
     int health = 0;
-    const int MAX_HEALTH = 10;
+    public const int HUMAN_MAX_HEALTH = 10;
     public const int MONSTER_MAX_HEALTH = 200;
     int startingHealth;
 
@@ -61,7 +61,7 @@ public class HealthController : MonoBehaviour
     {
         health -= hit;
         Vector3 scale = healthBar.transform.localScale;
-        scale.x = (float)health / MAX_HEALTH;
+        scale.x = (float)health / startingHealth;
         healthBar.transform.localScale = scale;
 
         if (health <= 0)

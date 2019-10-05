@@ -39,6 +39,7 @@ public class Player2Controls : MonoBehaviour
         {
             isPlayer = false;
         }
+        GetComponent<HealthController>().Health = HealthController.HUMAN_MAX_HEALTH;
     }
 
     // Update is called once per frame
