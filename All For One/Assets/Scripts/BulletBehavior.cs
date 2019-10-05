@@ -13,7 +13,7 @@ public class BulletBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.down * 0.5f);
+        transform.Translate(Vector3.up * 0.3f);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -23,6 +23,7 @@ public class BulletBehavior : MonoBehaviour
         {
             healthController.TakeHit(10);
         }
+
         Destroy(gameObject);
     }
 }

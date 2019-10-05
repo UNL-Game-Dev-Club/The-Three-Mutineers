@@ -12,6 +12,8 @@ public class PlatformBehavior : MonoBehaviour
     [SerializeField] bool isP2Platform;
     [SerializeField] bool isP3Platform;
 
+    [SerializeField] bool firesBullet;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +48,13 @@ public class PlatformBehavior : MonoBehaviour
                 bulletSpawner.Spawn();
             }
         } */
+
+        if (firesBullet)
+        {
+            // if bullet is loaded
+
+            bulletSpawner.Spawn();
+        }
 
         if (openGate)
         {
