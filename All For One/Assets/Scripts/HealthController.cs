@@ -5,16 +5,17 @@ using UnityEngine.UI;
 
 public class HealthController : MonoBehaviour
 {
-    int health;
+    int health = 0;
     const int MAX_HEALTH = 10;
-    public const int MONSTER_MAX_HEALTH = 20;
+    public const int MONSTER_MAX_HEALTH = 200;
+    int startingHealth;
 
     [SerializeField] GameObject healthBar;
 
     // Start is called before the first frame update
     void Start()
     {
-        health = MAX_HEALTH;
+
     }
 
     // Update is called once per frame
@@ -37,6 +38,7 @@ public class HealthController : MonoBehaviour
             }
             else
             {
+                startingHealth = value;
                 health = value;
             }
         }
@@ -46,7 +48,7 @@ public class HealthController : MonoBehaviour
     {
         health--;
         Vector3 scale = healthBar.transform.localScale;
-        scale.x = (float) health / MAX_HEALTH;
+        scale.x = (float) health / startingHealth;
         healthBar.transform.localScale = scale;
 
         if (health <= 0)

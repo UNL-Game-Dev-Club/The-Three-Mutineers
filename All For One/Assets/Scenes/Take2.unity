@@ -18087,6 +18087,26 @@ PrefabInstance:
       propertyPath: m_NormalizedViewPortRect.width
       value: 0.45
       objectReference: {fileID: 0}
+    - target: {fileID: 5692674663339914193, guid: 174f4bc4750ab06409f8a94e7e5705b4,
+        type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5692674663339914193, guid: 174f4bc4750ab06409f8a94e7e5705b4,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5692674663339914193, guid: 174f4bc4750ab06409f8a94e7e5705b4,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5692674663339914193, guid: 174f4bc4750ab06409f8a94e7e5705b4,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5692674663205027057, guid: 174f4bc4750ab06409f8a94e7e5705b4,
         type: 3}
       propertyPath: deadText
@@ -18521,6 +18541,26 @@ PrefabInstance:
       propertyPath: m_NormalizedViewPortRect.width
       value: 0.45
       objectReference: {fileID: 0}
+    - target: {fileID: 969458593555022657, guid: 2a6a1ca0c2b57dc4587874b5efee9409,
+        type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 969458593555022657, guid: 2a6a1ca0c2b57dc4587874b5efee9409,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 969458593555022657, guid: 2a6a1ca0c2b57dc4587874b5efee9409,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 969458593555022657, guid: 2a6a1ca0c2b57dc4587874b5efee9409,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a6a1ca0c2b57dc4587874b5efee9409, type: 3}
 --- !u!1 &1141834852
@@ -18798,6 +18838,12 @@ PrefabInstance:
       propertyPath: end
       value: 
       objectReference: {fileID: 117581425}
+    - target: {fileID: 3378941897903723129, guid: cf11857296e5db74092415b94f747b2c,
+        type: 3}
+      propertyPath: key
+      value: 
+      objectReference: {fileID: 6539678129519615719, guid: a40bc0c5253581a47aad185cfe1cb762,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf11857296e5db74092415b94f747b2c, type: 3}
 --- !u!1 &1246039934 stripped
@@ -19452,6 +19498,26 @@ PrefabInstance:
       propertyPath: m_NormalizedViewPortRect.width
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7396914593396689283, guid: 7d19250eaefad684cb4357647d03d56d,
+        type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396914593396689283, guid: 7d19250eaefad684cb4357647d03d56d,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396914593396689283, guid: 7d19250eaefad684cb4357647d03d56d,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396914593396689283, guid: 7d19250eaefad684cb4357647d03d56d,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7396914591997023995, guid: 7d19250eaefad684cb4357647d03d56d,
         type: 3}
       propertyPath: deadText
@@ -19557,7 +19623,7 @@ GameObject:
   - component: {fileID: 2027259079}
   - component: {fileID: 2027259078}
   m_Layer: 0
-  m_Name: Door
+  m_Name: Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

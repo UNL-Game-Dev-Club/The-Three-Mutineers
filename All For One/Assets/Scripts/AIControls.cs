@@ -14,6 +14,7 @@ public class AIControls : MonoBehaviour
     void Start()
     {
         StartCoroutine(Walk());
+        GetComponent<HealthController>().Health = HealthController.MONSTER_MAX_HEALTH;
     }
 
     // Update is called once per frame
