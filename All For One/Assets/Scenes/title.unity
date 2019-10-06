@@ -23117,8 +23117,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000030518, y: 309}
-  m_SizeDelta: {x: 801.1, y: 361.8}
+  m_AnchoredPosition: {x: 0.000015259, y: 309}
+  m_SizeDelta: {x: 1292.7, y: 361.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &924188018
 MonoBehaviour:
@@ -23151,7 +23151,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: All For One
+  m_Text: The Three Mutineers
 --- !u!222 &924188019
 CanvasRenderer:
   m_ObjectHideFlags: 0
