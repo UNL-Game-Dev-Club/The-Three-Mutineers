@@ -57,19 +57,37 @@ public class Player2Controls : MonoBehaviour
         if (Mathf.Abs(sprint) > dead)
         {
             speed = 0.2f;
+            GetComponent<Animator>().SetFloat("IdleToWalkToRun", 1);
         }
         else
         {
             speed = 0.1f;
+            GetComponent<Animator>().SetFloat("IdleToWalkToRun", 0);
         }
 
         if (Mathf.Abs(horizontal) > dead)
         {
             transform.Translate(Vector3.right * speed * horizontal);
+            GetComponent<Animator>().SetFloat("Horizontal", horizontal);
         }
+        else
+        {
+            GetComponent<Animator>().SetFloat("Horizontal", 0);
+        }
+
         if (Mathf.Abs(vertical) > dead)
         {
             transform.Translate(Vector3.up * speed * vertical);
+            GetComponent<Animator>().SetFloat("Vertical", vertical);
+        }
+        else
+        {
+            GetComponent<Animator>().SetFloat("Vertical", 0);
+        }
+
+        if (Mathf.Abs(horizontal) < dead && Mathf.Abs(vertical) < dead)
+        {
+            GetComponent<Animator>().SetFloat("IdleToWalkToRun", -1);
         }
     }
 

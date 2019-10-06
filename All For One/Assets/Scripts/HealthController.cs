@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HealthController : MonoBehaviour
 {
-    int health = 0;
+    [SerializeField] int health = 0;
     public const int HUMAN_MAX_HEALTH = 10;
     public const int MONSTER_MAX_HEALTH = 200;
     int startingHealth;
