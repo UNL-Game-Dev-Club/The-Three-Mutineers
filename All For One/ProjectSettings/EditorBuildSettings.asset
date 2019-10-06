@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/title.unity
     guid: e850bc6c14fd1c044acad0a9ea764412
   - enabled: 1
+    path: Assets/Scenes/IntroText.unity
+    guid: 5bd504b8df55b594896a67c8a368b1dd
+  - enabled: 1
     path: Assets/Scenes/Take2.unity
     guid: ecefaa30e78a10b4792f72305b5680fd
   - enabled: 1

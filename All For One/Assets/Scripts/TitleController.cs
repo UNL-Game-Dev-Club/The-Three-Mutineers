@@ -24,7 +24,7 @@ public class TitleController : MonoBehaviour
     public void StartButtonClicked()
     {
         Debug.Log("Starting");
-        SceneManager.LoadScene("Take2");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void QuitButtonClicked()
