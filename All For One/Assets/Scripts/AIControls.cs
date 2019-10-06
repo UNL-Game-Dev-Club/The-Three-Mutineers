@@ -10,11 +10,15 @@ public class AIControls : MonoBehaviour
     [SerializeField] float time;
     [SerializeField] GameObject key;
 
+    static int numGuards = 0;
+
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(Walk());
         GetComponent<HealthController>().Health = HealthController.MONSTER_MAX_HEALTH;
+
+        numGuards++;
     }
 
     // Update is called once per frame
@@ -62,6 +66,12 @@ public class AIControls : MonoBehaviour
 
     private void OnDestroy()
     {
+        numGuards--;
+        if (numGuards > 0)
+        {
+            return;
+        }
+
         Instantiate(key, transform.position, Quaternion.identity).name = "Key";
     }
 }

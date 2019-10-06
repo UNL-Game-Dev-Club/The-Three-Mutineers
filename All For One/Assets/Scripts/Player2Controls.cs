@@ -79,7 +79,6 @@ public class Player2Controls : MonoBehaviour
         {
             Destroy(collision.collider.gameObject);
             gotKey = true;
-            return;
         }
 
         Debug.Log(name + " " + collision.collider.name);
@@ -92,6 +91,14 @@ public class Player2Controls : MonoBehaviour
             if (otherHealthP2 != null)
             {
                 otherHealthP2.TakeHit();
+            }
+        }
+
+        if (collision.collider.name == "Exit")
+        {
+            if (attack && gotKey)
+            {
+                Destroy(collision.collider.gameObject);
             }
         }
     }

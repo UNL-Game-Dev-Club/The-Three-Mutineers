@@ -93,6 +93,14 @@ public class Player3Controls : MonoBehaviour
                 otherHealthP1.TakeHit();
             }
         }
+
+        if (collision.collider.name == "Exit")
+        {
+            if (attack && gotKey)
+            {
+                Destroy(collision.collider.gameObject);
+            }
+        }
     }
 
     public bool GotKey

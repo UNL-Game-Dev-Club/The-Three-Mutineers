@@ -104,7 +104,7 @@ public class Player1Controls : MonoBehaviour
 
         if (collision.collider.name == "Exit")
         {
-            if (attack)
+            if (attack && gotKey)
             {
                 Destroy(collision.collider.gameObject);
             }
