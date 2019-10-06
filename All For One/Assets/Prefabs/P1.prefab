@@ -182,6 +182,7 @@ MonoBehaviour:
   vertical: 0
   sprint: 0
   attack: 0
+  key: {fileID: 6539678129519615719, guid: a40bc0c5253581a47aad185cfe1cb762, type: 3}
   deadText: {fileID: 0}
   playerCamera: {fileID: 0}
 --- !u!50 &5692674663205027060

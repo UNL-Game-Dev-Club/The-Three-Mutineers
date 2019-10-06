@@ -15,7 +15,7 @@ public class TitleController : MonoBehaviour
     void Update()
     {
         // if (Input.GetKeyDown(KeyCode.JoystickButton0))
-        if (Input.anyKeyDown)
+        if (Input.anyKeyDown || Input.GetButtonDown("P1 Attack") || Input.GetButtonDown("P2 Attack") || Input.GetButtonDown("P3 Attack"))
         {
             StartButtonClicked();
         }

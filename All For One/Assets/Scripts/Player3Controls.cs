@@ -22,6 +22,7 @@ public class Player3Controls : MonoBehaviour
     bool isPlayer;
 
     bool gotKey;
+    [SerializeField] GameObject key;
 
     [SerializeField] GameObject playerCamera;
     [SerializeField] public GameObject deadText;
@@ -115,6 +116,9 @@ public class Player3Controls : MonoBehaviour
 
     private void OnDestroy()
     {
+        if (gotKey)
+            Instantiate(key, transform.position, Quaternion.identity).name = "Key";
+
         deadText.SetActive(true);
         isDead = true;
         Destroy(gameObject);
