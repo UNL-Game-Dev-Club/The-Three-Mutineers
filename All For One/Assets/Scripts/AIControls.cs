@@ -31,13 +31,13 @@ public class AIControls : MonoBehaviour
             time = 0;
             while (transform.position != end.transform.position)
             {
-                transform.position = Vector3.Lerp(transform.position, end.transform.position, time / 100.0f);
+                transform.position = Vector3.Lerp(transform.position, end.transform.position, time / 10.0f);
                 time += Time.deltaTime;
                 yield return new WaitForEndOfFrame();
             }
 
             time = 0;
-            while (time < 3.0f)
+            while (time < 20.0f)
             {
                 time += Time.deltaTime;
                 yield return new WaitForEndOfFrame();
@@ -46,13 +46,13 @@ public class AIControls : MonoBehaviour
             time = 0;
             while (transform.position != start.transform.position)
             {
-                transform.position = Vector3.Lerp(transform.position, start.transform.position, time / 100.0f);
+                transform.position = Vector3.Lerp(transform.position, start.transform.position, time / 10.0f);
                 time += Time.deltaTime;
                 yield return new WaitForEndOfFrame();
             }
 
             time = 0;
-            while (time < 3.0f)
+            while (time < 20.0f)
             {
                 time += Time.deltaTime;
                 yield return new WaitForEndOfFrame();

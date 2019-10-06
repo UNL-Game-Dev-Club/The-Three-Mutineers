@@ -21,7 +21,7 @@ public class BulletBehavior : MonoBehaviour
         HealthController healthController = collision.collider.GetComponent<HealthController>();
         if (healthController != null)
         {
-            healthController.TakeHit(10);
+            healthController.TakeHit(50);
         }
 
         Destroy(gameObject);
