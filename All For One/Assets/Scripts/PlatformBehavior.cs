@@ -20,12 +20,18 @@ public class PlatformBehavior : MonoBehaviour
     [SerializeField] TileBase tileUnactive;
     [SerializeField] TileBase tileActive;
 
-    [SerializeField] GameObject deathPlane;
+    [SerializeField] Collider2D deathPlane;
+    [SerializeField] GameObject deathPlaneObject;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        tilemap.SetTile(new Vector3Int(-1, -13, 0), tileUnactive);
+        tilemap.SetTile(new Vector3Int(-2, -13, 0), tileUnactive);
+        tilemap.SetTile(new Vector3Int(-1, -14, 0), tileUnactive);
+        tilemap.SetTile(new Vector3Int(-2, -14, 0), tileUnactive);
+        deathPlane.enabled = false;
+        deathPlaneObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -79,7 +85,8 @@ public class PlatformBehavior : MonoBehaviour
             tilemap.SetTile(new Vector3Int(-1, -14, 0), tileActive);
             tilemap.SetTile(new Vector3Int(-2, -14, 0), tileActive);
 
-            deathPlane.SetActive(true);
+            deathPlane.enabled = true;
+            deathPlaneObject.SetActive(true);
         }
     }
 
@@ -114,7 +121,8 @@ public class PlatformBehavior : MonoBehaviour
             tilemap.SetTile(new Vector3Int(-1, -14, 0), tileUnactive);
             tilemap.SetTile(new Vector3Int(-2, -14, 0), tileUnactive);
 
-            deathPlane.SetActive(false);
+            deathPlane.enabled = false;
+            deathPlaneObject.SetActive(false);
         }
     }
 }

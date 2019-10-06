@@ -11,7 +11,7 @@ public class AIControls : MonoBehaviour
     [SerializeField] float time;
     [SerializeField] GameObject key;
 
-    [SerializeField] GameObject deathPlane;
+    [SerializeField] Collider2D deathPlane;
 
     static int numGuards = 0;
 
@@ -22,6 +22,15 @@ public class AIControls : MonoBehaviour
         GetComponent<HealthController>().Health = HealthController.MONSTER_MAX_HEALTH;
 
         numGuards++;
+
+        if (numGuards > 1)
+        {
+            // randomGuard = Random.Range(0, numGuards);
+        }
+        else
+        {
+            // randomGuard = 0;
+        }
     }
 
     // Update is called once per frame
@@ -39,7 +48,7 @@ public class AIControls : MonoBehaviour
         {
             if (deathPlane != null)
             {
-                if (deathPlane.activeSelf)
+                if (deathPlane.enabled)
                 {
                     destination = spikeBeacon.transform.position;
                 }
@@ -84,12 +93,18 @@ public class AIControls : MonoBehaviour
 
     private void OnDestroy()
     {
+        Debug.Log("Destroying 1 guard from " + numGuards);
         numGuards--;
-        if (numGuards > 0)
-        {
-            return;
-        }
 
-        Instantiate(key, transform.position, Quaternion.identity).name = "Key";
+        if (numGuards == 0)
+        {
+            Debug.Log("Dropping key");
+            Instantiate(key, transform.position, Quaternion.identity).name = "Key";
+        }
+    }
+
+    private void OnApplicationQuit()
+    {
+        Destroy(GameObject.Find("Key"));
     }
 }

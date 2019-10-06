@@ -17527,21 +17527,6 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.a
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5692674663339914193, guid: 174f4bc4750ab06409f8a94e7e5705b4,
-        type: 3}
-      propertyPath: m_NormalizedViewPortRect.y
-      value: 0.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 5692674663339914193, guid: 174f4bc4750ab06409f8a94e7e5705b4,
-        type: 3}
-      propertyPath: m_NormalizedViewPortRect.width
-      value: 0.48
-      objectReference: {fileID: 0}
-    - target: {fileID: 5692674663339914193, guid: 174f4bc4750ab06409f8a94e7e5705b4,
-        type: 3}
-      propertyPath: m_NormalizedViewPortRect.height
-      value: 0.48
-      objectReference: {fileID: 0}
     - target: {fileID: 5692674663205027057, guid: 174f4bc4750ab06409f8a94e7e5705b4,
         type: 3}
       propertyPath: deadText
@@ -18231,16 +18216,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_BackGroundColor.a
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 969458593555022657, guid: 2a6a1ca0c2b57dc4587874b5efee9409,
-        type: 3}
-      propertyPath: m_NormalizedViewPortRect.width
-      value: 0.48
-      objectReference: {fileID: 0}
-    - target: {fileID: 969458593555022657, guid: 2a6a1ca0c2b57dc4587874b5efee9409,
-        type: 3}
-      propertyPath: m_NormalizedViewPortRect.height
-      value: 0.48
       objectReference: {fileID: 0}
     - target: {fileID: 969458593376775606, guid: 2a6a1ca0c2b57dc4587874b5efee9409,
         type: 3}
@@ -19909,26 +19884,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_BackGroundColor.a
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7396914593396689283, guid: 7d19250eaefad684cb4357647d03d56d,
-        type: 3}
-      propertyPath: m_NormalizedViewPortRect.y
-      value: 0.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 7396914593396689283, guid: 7d19250eaefad684cb4357647d03d56d,
-        type: 3}
-      propertyPath: m_NormalizedViewPortRect.height
-      value: 0.48
-      objectReference: {fileID: 0}
-    - target: {fileID: 7396914593396689283, guid: 7d19250eaefad684cb4357647d03d56d,
-        type: 3}
-      propertyPath: m_NormalizedViewPortRect.x
-      value: 0.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 7396914593396689283, guid: 7d19250eaefad684cb4357647d03d56d,
-        type: 3}
-      propertyPath: m_NormalizedViewPortRect.width
-      value: 0.48
       objectReference: {fileID: 0}
     - target: {fileID: 7396914591997023995, guid: 7d19250eaefad684cb4357647d03d56d,
         type: 3}

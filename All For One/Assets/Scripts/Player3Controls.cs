@@ -24,7 +24,9 @@ public class Player3Controls : MonoBehaviour
     bool gotKey;
 
     [SerializeField] GameObject playerCamera;
-    [SerializeField] GameObject deadText;
+    [SerializeField] public GameObject deadText;
+
+    public static bool isDead = false;
 
     // Start is called before the first frame update
     void Start()
@@ -114,6 +116,7 @@ public class Player3Controls : MonoBehaviour
     private void OnDestroy()
     {
         deadText.SetActive(true);
+        isDead = true;
         Destroy(gameObject);
     }
 }

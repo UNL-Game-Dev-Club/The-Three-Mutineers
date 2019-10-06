@@ -261,7 +261,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &969458593555022659
 Transform:
   m_ObjectHideFlags: 0
@@ -285,8 +285,8 @@ Camera:
   m_GameObject: {fileID: 969458593555022658}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -297,8 +297,8 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0.45
-    height: 0.45
+    width: 0.48
+    height: 0.48
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
