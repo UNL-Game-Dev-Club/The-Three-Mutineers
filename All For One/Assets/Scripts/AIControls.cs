@@ -6,9 +6,12 @@ public class AIControls : MonoBehaviour
 {
     [SerializeField] GameObject start;
     [SerializeField] GameObject end;
+    [SerializeField] GameObject spikeBeacon;
 
     [SerializeField] float time;
     [SerializeField] GameObject key;
+
+    [SerializeField] GameObject deathPlane;
 
     static int numGuards = 0;
 
@@ -29,17 +32,32 @@ public class AIControls : MonoBehaviour
 
     IEnumerator Walk()
     {
+        Vector3 destination = end.transform.position;
+
         time = 0;
         while (true)
         {
-            time = 0;
-            while (transform.position != end.transform.position)
+            if (deathPlane != null)
             {
-                transform.position = Vector3.Lerp(transform.position, end.transform.position, time / 10.0f);
+                if (deathPlane.activeSelf)
+                {
+                    destination = spikeBeacon.transform.position;
+                }
+                else
+                {
+                    destination = end.transform.position;
+                }
+            }
+
+            time = 0;
+            while (transform.position != destination)
+            {
+                transform.position = Vector3.Lerp(transform.position, destination, time / 10.0f);
                 time += Time.deltaTime;
                 yield return new WaitForEndOfFrame();
             }
 
+            destination = start.transform.position;
             time = 0;
             while (time < 20.0f)
             {
@@ -48,9 +66,9 @@ public class AIControls : MonoBehaviour
             }
 
             time = 0;
-            while (transform.position != start.transform.position)
+            while (transform.position != destination)
             {
-                transform.position = Vector3.Lerp(transform.position, start.transform.position, time / 10.0f);
+                transform.position = Vector3.Lerp(transform.position, destination, time / 10.0f);
                 time += Time.deltaTime;
                 yield return new WaitForEndOfFrame();
             }

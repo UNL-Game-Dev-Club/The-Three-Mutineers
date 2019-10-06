@@ -114,5 +114,6 @@ public class Player2Controls : MonoBehaviour
     private void OnDestroy()
     {
         deadText.SetActive(true);
+        Destroy(gameObject);
     }
 }
